@@ -42,7 +42,7 @@ let kata18Info = document.createElement("div")
 
 // Display the numbers from 1 to 20. (1, 2, 3, …,19, 20)
 mainElement.append(kata1Heading)
-kata1Heading.append("kata 1")
+kata1Heading.append("Kata 1")
 mainElement.append(kata1Info)
 let counter = 1
 while (counter < 21) {
@@ -52,7 +52,7 @@ while (counter < 21) {
 
 // Display the even numbers from 1 to 20. (2, 4, 6, …, 18, 20)
 mainElement.append(kata2Heading)
-kata2Heading.append("kata 2")
+kata2Heading.append("Kata 2")
 mainElement.append(kata2Info)
 counter = 2
 while (counter < 21) {
@@ -168,38 +168,79 @@ mainElement.append(kata12Heading)
 kata12Heading.append("Kata 12")
 mainElement.append(kata12Info)
 // function getEvenNumbers(){
-//     let arr = sampleArray;
-//     for(counter12 = 0; counter12 < arr.length; counter12 += 1){
-//       if (arr[counter12] % 2 === 0){
+//     for(counter12 = 0; counter12 < sampleArray.length; counter12 += 1){
+//       if (sampleArray[counter12] % 2 === 0){
 //       }
 //     }
 // }
-for (counter12 = 0; counter12 < sampleArray.length; counter12 +=2){
+for (counter12 = 0; counter12 < sampleArray.length; counter12 +=1){
+    if (sampleArray[counter12] % 2===0){
     mainElement.append(sampleArray[counter12] + ", ")
+    }
   }
 
-  
+
+
+
 // /13/ Display all the odd numbers contained in sampleArray. (469, 755, 245, …, 179, 535)
 mainElement.append(kata13Heading)
 kata13Heading.append("Kata 13")
 mainElement.append(kata13Info)
+// var evens = [];
+// var odds = [];
+
+// for (var i = 0; i < sampleArray.length; i++) {
+
+//     if ((sampleArray[i] % 2) != 1) {
+//         evens.push(sampleArray[i]);
+//         console.log(evens);
+//     }
+//     else {
+//         odds.push(sampleArray[i]);
+//     }
+//     mainElement.append(odds);
+
+// }
+for (counter13 = 0; counter13 < sampleArray.length; counter13 +=1){
+    if (sampleArray[counter13] % 2===1){
+    mainElement.append(sampleArray[counter13] + ", ")
+    }
+  }
+
+
 
 // /14/ Display the square of each element in sampleArray. (219961, 570025, …, 222784)
 mainElement.append(kata14Heading)
 kata14Heading.append("Kata 14")
 mainElement.append(kata14Info)
+for (counter14 = 0; counter14 < sampleArray.length; counter14 += 1) {
+    kata14Info.append(sampleArray[counter14] * sampleArray[counter14] + ", ")
+}
+
 
 // /15/ Display the sum of all the numbers from 1 to 20.
 mainElement.append(kata15Heading)
 kata15Heading.append("Kata 15")
 mainElement.append(kata15Info)
-let kata15Add = 0
-for (counter15 = 0; counter15 < ; counter15 += 1) {
-    kata16Add += sampleArray[counter16]
-    if (kata16Last === counter16) {
-        kata16Info.append(sampleArray[counter16] + " = " + kata16Add)
-    } else {
-        kata16Info.append(sampleArray[counter16] + " + ")
+// forKata15 = 0
+// let  ForKata15 = 20
+// for (counter15 = 1; counter15 <= ForKata15; counter15 += 1) {
+// 
+//     forKata15 += counter15
+// 
+//     if  (Counter15 == forKata15 ){
+//         Kata15Info.append(counter15 + "= " + forKata15)
+//     } 
+// else  {
+//         kata15Info.append(counter15 + "+ ")
+//    }
+//  }
+forKata15 = 0
+let xForKata15 = 20
+for (counter15 = 1; counter15 <= xForKata15; counter15 += 1) {
+    forKata15 += counter15
+    if (counter15 === xForKata15) {
+        kata15Info.append( forKata15)
     }
 }
 //210
@@ -230,11 +271,35 @@ for (counter16 = 0; counter16 < sampleArray.length; counter16 += 1) {
 mainElement.append(kata17Heading)
 kata17Heading.append("Kata 17")
 mainElement.append(kata17Info)
+smallestElement = 0
+for (counter17 = 0; counter17 < sampleArray.length; counter17 += 1) {
+    if (smallestElement === 0) {
+        smallestElement = sampleArray[counter17]
+    } if (sampleArray[counter17] < smallestElement ){
+        smallestElement = sampleArray[counter17]
+
+    }
+
+}
+kata17Info.append(smallestElement)
+
 
 
 // /18/ Display the largest element in sampleArray.
 mainElement.append(kata18Heading)
 kata18Heading.append("Kata 18")
 mainElement.append(kata18Info)
+largestElement = 0
+for (counter18 = 0; counter18 < sampleArray.length; counter18 += 1) {
 
+    if (largestElement === 0 ){
+        largestElement = sampleArray[counter18]
+    } if(sampleArray[counter18] > largestElement) {
+     largestElement = sampleArray[counter18]
+
+
+    }
+}
+
+kata18Info.append(largestElement)
 
